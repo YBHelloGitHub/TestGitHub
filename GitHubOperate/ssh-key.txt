@@ -1,0 +1,13 @@
+
+/* 据说会自动添加到版本说明和代码中 ??  */
+git config --global user.name "YBHello"
+git config --global user.email "YBHello163@163.com"
+
+/* 与 user.email 的值一致, 将生成的密钥文件xx.pub 数据复制到 github 上 */
+ssh-keygen -C "YBHello163@163.com" -t rsa
+
+/* git@github.com  是一个公共的账户 */
+ssh -T git@github.com
+
+/* 拽一个包下来   用户名/仓库名 */
+git pull git@github.com:YBHelloGitHub/TestGitHub.git
