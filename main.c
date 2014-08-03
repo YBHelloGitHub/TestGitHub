@@ -2,7 +2,7 @@
 
 int main(void)
 {
-  printf("Hello, Git Hub!");
+  printf("Hello, [31Git Hub!\n");
   
   return 0;
 }
