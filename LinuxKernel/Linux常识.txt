@@ -1,0 +1,98 @@
+2014年 08月 03日 星期日 22:53:32 CST
+/********************************** BEGIN *******************************************/
+
+2014 08 02 加班，看了一本关于Linux的书，看了最后一章节,记录了一些东西,记录于此.
+
+
+
+Linux Kernel Mailing List  (LKML)
+		subscibe linux-kernel <your@email.address>
+		---> majordomo@vger.kernel.org
+		(听说可以获得一些关于Linux的讨论文章)
+
+一些值得关注的网站：
+		http://www.tux.org/lkml
+			      .kernelnew-bies.org
+				  .lwn.net
+				  .kerneltraffic.org
+
+关于编码风格
+		linus -> Documentation/codingstyle
+		TAB -> 8(8 spaces width,but not space)  K&RC
+		代码长度不超过两屏
+		局部变量不应超过 10 个
+		使用 MACRO 或者 inline
+
+注释：
+		做什么？
+		为什么要做？
+		不是：
+			通过什么方式实现
+		Author ModifyDate --> 注释到文件头
+		使用C注释风格，非C++格式
+		重要信息：    XXX:  xxoo
+		参考：
+			Documentation/kernel-doc-nano-HOWTO.txt
+		/**
+		 * func_name-print 'Hello World!'.
+		 * @arg_1-this is first argument.
+		 * @arg_2-this is second argument.
+		 * @return-return 0 if everything is OK, or a negitive number.
+		 *
+		 * something need to append.
+		 */
+
+No:
+		typedef:隐藏了实际类型 + 懒惰 ^.^
+
+MACRO:
+		#ifdef WIN32
+			foo();
+		#endif
+
+		-->
+
+		#ifdef WIN32
+			static int foo(void)
+			{
+				/* something */
+			}
+		#else
+			static int foo(void)
+			{
+				/* nothing */
+			}
+		#endif
+
+结构体初始化：
+		struct foo ini_struct = {
+			.a		= INITIAL_A,
+			.b		= INITIAL_B,
+		};
+
+修正风格：
+		indent -kr -i8 -ts8 -sob -l8o -ss -bs -psl <file>
+		or:
+		scripts/ Lindent
+
+留名青册：
+		CREDITS
+		MAINTAINERS
+
+补丁：(武器大师贾克师说：它是最强大是武器.)
+		diff -urN linux-x.y.z/ linux/ > my-patch
+		diff -u <file.origin> <file.modify> >my-patch
+		patch -p1 < ../my-patch
+		diffstat -p1 my-patch
+
+内核链表：
+		struct my_struct mine = {
+			.list		= LIST_HEAD_INIT(mine.list);
+			.dog		= 0,
+			.cat		= NULL,
+		};
+
+	
+
+/************************ THE END *********************************/
+2014年 08月 03日 星期日 23:22:51 CST
