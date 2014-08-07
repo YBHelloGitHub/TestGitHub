@@ -1,0 +1,31 @@
+ethtool
+
+可以监测以太网口的物理状态
+
+基本用法：
+
+	$ ethtool eth0
+
+例子：
+
+	$ ethtool eth0
+
+Settings for eth0:
+	Supported ports: [ TP ]
+	Supported link modes:   10baseT/Half 10baseT/Full 
+	                        100baseT/Half 100baseT/Full 
+	Supported pause frame use: No
+	Supports auto-negotiation: Yes
+	Advertised link modes:  Not reported
+	Advertised pause frame use: No
+	Advertised auto-negotiation: Yes
+	Speed: Unknown!
+	Duplex: Unknown! (255)
+	Port: Twisted Pair
+	PHYAD: 0
+	Transceiver: internal
+	Auto-negotiation: on
+	MDI-X: Unknown
+	Current message level: 0x0000003f (63)
+			       drv probe link timer ifdown ifup
+	Link detected: no
