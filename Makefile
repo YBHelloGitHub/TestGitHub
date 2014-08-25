@@ -3,4 +3,4 @@ all:
 
 # 不是真正的目标，是伪目标.
 .PHONY clean: main
-	rm $^
+	@rm -rf $^
