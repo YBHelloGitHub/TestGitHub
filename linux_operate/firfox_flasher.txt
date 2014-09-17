@@ -1,0 +1,7 @@
+* 下载 Adobe Flash Player 包
+
+* 解压
+
+*  .so 放入 /usr/lib/mozilla/plugins/ 目录下
+
+*  ./usr/* 放入 /usr/ 目录下

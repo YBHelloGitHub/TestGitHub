@@ -1,0 +1,23 @@
+
+*  $ sudo blkid
+	/dev/sda1: LABEL="M-gM-3M-;M-gM-;M-^_M-dM-?M-^]M-gM-^UM-^Y" UUID="B66E3C996E3C53F9" TYPE="ntfs" 
+	/dev/sda2: UUID="002E407D2E406DAA" TYPE="ntfs" 
+	/dev/sda5: UUID="8A42A7EB42A7DA69" TYPE="ntfs" 
+	/dev/sda6: UUID="6692097992094ECD" TYPE="ntfs" 
+	/dev/sda7: LABEL="M-fM-^\M-,M-eM-^\M-0M-gM-#M-^AM-gM-^[M-^X" UUID="F8967A7F967A3DE6" TYPE="ntfs" 
+	/dev/sda8: UUID="bc1b192d-0c7a-4a8b-a87d-ba43f5e1cde0" TYPE="ext4" 
+	/dev/sda9: UUID="eef3f5fc-fffc-42fc-8dc4-906804323ddb" TYPE="swap" 
+
+*  $ add /etc/fstab
+	# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+	# / was on /dev/sda8 during installation
+	UUID=bc1b192d-0c7a-4a8b-a87d-ba43f5e1cde0 /               ext4    errors=remount-ro 0       1
+	# swap was on /dev/sda9 during installation
+	UUID=eef3f5fc-fffc-42fc-8dc4-906804323ddb none            swap    sw              0       0
+
+	# for window ntfs
+	UUID=002E407D2E406DAA	/mnt/winc	ntfs	defaults,codepage=936,iocharset=gb2312	0	0
+	UUID=8A42A7EB42A7DA69	/mnt/wind	ntfs	defaults,codepage=936,iocharset=gb2312	0	0
+	UUID=6692097992094ECD	/mnt/wine	ntfs	defaults,codepage=936,iocharset=gb2312	0	0
+
+*  $ mkdir /mnt/win[c,d,e]
