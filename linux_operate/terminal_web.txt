@@ -1,0 +1,7 @@
+w3m
+可以访问网页，通过终端
+
+输入文字 或 链接处 输入 <Enter> 键 即可执行.
+
+TAB			next link
+Ctrl + u	pre  link

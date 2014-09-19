@@ -21,3 +21,6 @@
 	UUID=6692097992094ECD	/mnt/wine	ntfs	defaults,codepage=936,iocharset=gb2312	0	0
 
 *  $ mkdir /mnt/win[c,d,e]
+
+UUID 用 /dev/sda1 代替也可以
+	也可以采用 LABEL="FUCK WIN BOOT DEV" 代替.

@@ -1,0 +1,31 @@
+
+* ubuntu dict soft
+	$ sudo apt-get install dict
+
+	$ dict shit
+
+
+* connect youdao dict internet by .py
+
+	$ /opt/bin/youdao fuck
+
+	or
+
+	$ youdao WWPN
+
+
+* ubuntu offline dict
+
+	$ sudo apt-get install sdcv
+
+	Then get offline database from
+
+	http://abloz.com/huzheng/stardict-dic/zh_CN/xxx.tar.bz2
+
+	$ tar -xvf xxx.tar.bz2 -C ~/.stardict/dic/ 
+
+	$ sdcv dict
+
+
+
+
