@@ -1,0 +1,7 @@
+如何像使用ubuntu一样方便使用tab键自动补全命令
+
+
+bash-completion增强bash的自动补全功能
+
+
+最早接触的linux发行版本是ubuntu，后来学习工作等原因转向了redhat系的发行版本，使用中发现同样使用的是bash但是redhat系中bash的补全功能却比ubuntu中bash的补全功能弱了不少，后来查资料发现是ubuntu中预装了bash-completion这个软件。安装上这个软件后你的bash补全功能就和ubuntu中的一样强大了

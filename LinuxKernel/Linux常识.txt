@@ -12,9 +12,9 @@ Linux Kernel Mailing List  (LKML)
 
 一些值得关注的网站：
 		http://www.tux.org/lkml
-			      .kernelnew-bies.org
-				  .lwn.net
-				  .kerneltraffic.org
+		http://www.kernelnew-bies.org
+		http://www.lwn.net
+		http://www.kerneltraffic.org
 
 关于编码风格
 		linus -> Documentation/codingstyle

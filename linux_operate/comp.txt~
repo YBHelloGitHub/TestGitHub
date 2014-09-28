@@ -1,0 +1,7 @@
+. comp.sh
+complete -F _foo foo
+
+$ foo --h
+
+http://kodango.com/bash-competion-programming
+
