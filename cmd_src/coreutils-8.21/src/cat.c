@@ -64,6 +64,7 @@ static char line_buf[LINE_COUNTER_BUF_LEN] =
     ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0',
     '\t', '\0'
   };
+/* cat 命令显示行号的缓存最后两位为 TAB 和 NUL 结束符 */
 
 /* Position in 'line_buf' where printing starts.  This will not change
    unless the number of lines is larger than 999999.  */
@@ -143,6 +144,13 @@ next_line_num (void)
   if (line_num_start < line_num_print)
     line_num_print--;
 }
+/* Session:
+	1. 20 -> 21
+		while 循环处理
+	2. 99 -> 100 
+		第一个 if 语句处理添加 1 的行为
+	3.	> 20 个数字
+		第二个 if 语句处理		*/
 
 /* Plain cat.  Copies the file behind 'input_desc' to STDOUT_FILENO.
    Return true if successful.  */
@@ -187,6 +195,7 @@ simple_cat (
       }
     }
 }
+/* 简单显示 */
 
 /* Write any pending output to STDOUT_FILENO.
    Pending is defined to be the *BPOUT - OUTBUF bytes starting at OUTBUF.
