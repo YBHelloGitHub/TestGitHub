@@ -1,3 +1,29 @@
 git add .
 git commit
 git push
+
+
+git clone ...
+
+git add .
+git commit -m '...'
+git remote add origin ...
+git push origin master 
+
+
+branch.
+	master develop feature-x feature-y fixbug-x fixbug-y
+
+git checkout -b develop master (git server with up branch)
+	to switch to branch 'develop' from 'master'
+git checkout master
+	switch back 'master'
+git merge --no-ff develop
+	merge 'develop' to 'master'
+git tag -a 1.2
+	mask a tag after merge
+
+branch:
+	HEAD master   is  git server branch
+	origin/HEAD origin/master is local branch
+
